@@ -12,13 +12,13 @@ def main():
 
     fxTotal, fyTotal, fuerzaMagnitud = calcularFuerzaNeta(fuerzas)
 
+    masa = float(input("\nIngrese la masa del bloque en kilogramos: "))
+    aceleracionX, aceleracionY, magnitudAceleracion = calcularAceleracion(fxTotal, fyTotal, masa)
+
     print("\n-----Fuerzas Neta-----")
     print(f"Fuerza FX Total: {fxTotal:.2f} N")
     print(f"Fuerza FY Total: {fyTotal:.2f} N")
     print(f"Magnitud total: {fuerzaMagnitud:.2f} N")
-
-    masa = float(input("\nIngrese la masa del bloque en kilogramos: "))
-    aceleracionX, aceleracionY, magnitudAceleracion = calcularAceleracion(fxTotal, fyTotal, masa)
 
     print("\n-----Aceleración-----")
     print(f"Aceleración en X: {aceleracionX:.2f} m/s²")

@@ -45,5 +45,14 @@ def calcularFuerzaNeta(fuerzas):
         magnitudFuerzaNeta = math.sqrt(sumaFX**2 + sumaFY**2)
     return (sumaFX, sumaFY, magnitudFuerzaNeta)
 
+
+def calcularAceleracion(fxTotal, fyTotal, masa):
+    aceleracionX = fxTotal / masa
+    aceleracionY = fyTotal / masa
+    magnitudAceleracion = math.sqrt(aceleracionX**2 + aceleracionY**2)
+    return (aceleracionX, aceleracionY, magnitudAceleracion)
+
+
+
 if __name__ == "__main__":
     main()

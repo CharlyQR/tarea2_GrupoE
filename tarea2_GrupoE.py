@@ -34,5 +34,16 @@ def ingresarFuerzas():
 
     return fuerzas
 
+
+def calcularFuerzaNeta(fuerzas):
+    sumaFX = 0
+    sumaFY = 0
+
+    for fx, fy in fuerzas:
+        sumaFX += fx
+        sumaFY += fy
+        magnitudFuerzaNeta = math.sqrt(sumaFX**2 + sumaFY**2)
+    return (sumaFX, sumaFY, magnitudFuerzaNeta)
+
 if __name__ == "__main__":
     main()
